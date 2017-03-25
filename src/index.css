@@ -1,7 +1,7 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 
 .flex-row {
@@ -31,17 +31,31 @@ body {
 }
 
 .dim-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.5);;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.flash {
+	animation-name: flash;
+	animation-duration: 0.3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+
+@keyframes flash {
+	from {opacity: 1; color: red;}
+	to {opacity: 0; color: yellow;}
 }
 
 .thumb {
@@ -69,4 +83,11 @@ ul.bikes-list li {
 	border-bottom: 1px solid white;
 	align-items: center;
 	cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  ul.bikes-list {
+  	max-height: 300px;
+  	overflow-y: auto;
+  }
 }

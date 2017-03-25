@@ -7,7 +7,9 @@ const BikeDetails = ({bike}) => (
 			<h1 className='col-7'>{bike.name}</h1>
 			<h1 className='col-5 text-right'>PLN {bike.price}</h1>
 		</div>
-		<div className='m-3 small'>{bike.desc}</div>
+		<div className='m-3 small p-3'>
+			{bike.desc}
+		</div>
 		<div className='row'>
 			<div className='col-4'>Brand:</div>
 			<div className='col-8 text-right'>{bike.brand}</div>
@@ -28,7 +30,7 @@ const BikeDetails = ({bike}) => (
 			<div className='col-4'>Year:</div>
 			<div className='col-8 text-right'>{bike.year}</div>
 		</div>
-		<div className='mt-3'>
+		<div className='mt-3 text-center'>
 			<img style={{maxWidth: '100%'}} src={images.getImage(bike.id)} />
 		</div>
 	</div>
