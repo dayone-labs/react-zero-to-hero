@@ -1,5 +1,4 @@
 import React from 'react'
-import images from './images'
 
 const BikeDetails = ({bike}) => (
 	<div className='container'>
@@ -29,9 +28,6 @@ const BikeDetails = ({bike}) => (
 		<div className='row'>
 			<div className='col-4'>Year:</div>
 			<div className='col-8 text-right'>{bike.year}</div>
-		</div>
-		<div className='mt-3 text-center'>
-			<img style={{maxWidth: '100%'}} src={images.getImage(bike.id)} />
 		</div>
 	</div>
 )
