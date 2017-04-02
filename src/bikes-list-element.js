@@ -1,10 +1,8 @@
 import React from 'react'
 import images from './images'
 
-const BikeListElement = ({bike, onSelect}) => (
-	<li className='flex-row fill-space'
-			onClick={() => onSelect(bike)}>
-			
+const BikeListElement = ({bike}) => (
+	<li className='flex-row fill-space'>
 		<div className='thumb'>
 			<img src={images.getThumb(bike.id)} />
 		</div>

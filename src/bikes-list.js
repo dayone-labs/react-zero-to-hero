@@ -1,18 +1,17 @@
 import React from 'react'
 import _ from 'lodash'
-import logLifecycle from './log-lifecycle'
 import Bike from './bikes-list-element'
 
-const BikesList = ({bikes, onSelect}) => {
-  const renderBike = (b) => (
-    <Bike bike={b} onSelect={onSelect} key={b.id}/>
-  )
+const BikesList = ({bikes}) => {
+	const renderBike = (b) => (
+		<Bike bike={b} key={b.id}/>
+	)
 
 	return (
-    <ul className='bikes-list'>
+		<ul className='bikes-list'>
 			{_.map(bikes, renderBike)}
 		</ul>
 	)
 }
 
-export default logLifecycle(BikesList)
+export default BikesList
