@@ -1,7 +1,6 @@
 import React from 'react'
 import uuid from 'uuid/v4'
 import _ from 'lodash'
-import logLifecycle from './log-lifecycle'
 import BikesList from './bikes-list'
 import BikeDetails from './bike-details'
 import Modal from './modal'
