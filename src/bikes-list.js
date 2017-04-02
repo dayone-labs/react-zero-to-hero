@@ -1,6 +1,5 @@
 import React from 'react'
 import _ from 'lodash'
-import logLifecycle from './log-lifecycle'
 import Bike from './bikes-list-element'
 
 const BikesList = ({bikes, onSelect}) => {
@@ -15,4 +14,4 @@ const BikesList = ({bikes, onSelect}) => {
 	)
 }
 
-export default logLifecycle(BikesList)
+export default BikesList
