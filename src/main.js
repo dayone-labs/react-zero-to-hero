@@ -1,7 +1,6 @@
 import React from 'react'
 import uuid from 'uuid/v4'
 import _ from 'lodash'
-import logLifecycle from './log-lifecycle'
 import BikesList from './bikes-list'
 import BikeDetails from './bike-details'
 import Modal from './modal'
@@ -12,7 +11,6 @@ import {bikes} from './data'
 const Main = React.createClass({
 	getInitialState() {
 		return {
-			bikes,
 			selectedBike: bikes[0]
 		}
 	},
@@ -35,16 +33,8 @@ const Main = React.createClass({
 		})
 	},
 
-	createNew(bikeData) {
-		const bike = _.assign({id: uuid()}, bikeData)
-		this.setState({
-			bikes: _.concat(this.state.bikes, bike),
-			showNewPopup: false
-		})
-	},
-
 	render() {
-		const { bikes, selectedBike, showNewPopup } = this.state
+		const {selectedBike, showNewPopup } = this.state
 
 		return (
 			<div>
@@ -67,7 +57,7 @@ const Main = React.createClass({
 						</div>
 					</div>
 					<Modal visible={showNewPopup} onDismiss={this.hideNewPopup}>
-						<AddNew onSave={this.createNew} onCancel={this.hideNewPopup}/>
+						<AddNew />
 					</Modal>
 				</div>
 			</div>
